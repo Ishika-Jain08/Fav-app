@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+ import "./App.css" ;
+ import FacultyPage from './Pages/FacultyPage';
+ import Leave from './Pages/Leave';
+ 
+import {   Routes,Route} from 'react-router-dom';
+import Stopwatch from './Pages/Watch/StopWatch';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+  <>
+  
+     <Routes>
+      <Route path='/' element={<FacultyPage/>} />
+      <Route path='/Leave' element={<Leave/>} />
+      <Route path='/clock' element={<Stopwatch/>}/>
+    </Routes>  
+    </>
   );
 }
 
-export default App;
+export default App
